@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="data" step="any">
+        <button onclick="palindrome()">check</button>
+        <h1 id="res"></h1>
+    </div>
+</body>
+<script>
+    function palindrome(){
+        let str = document.getElementById('data').value
+       console.log(str)
+        let strarray = str.split('');//splitining string
+        let strarrayrev = strarray.reverse();//reversing split srtring
+        let revString = strarrayrev.join('')//jion reversed split srtring
+        if(str==revString){
+            document.getElementById("res").innerText = "Is Palindrome"
+        }
+        else{
+            document.getElementById("res").innerText = "Not Palindrome"
+        }
+       }
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="data" step="any">
+            <button onclick="arm()">check</button>
+            <h1 id="res"></h1>
+        </div>
+</body>
+<script>
+    
+     function arm(){
+        let num = document.getElementById("data").value
+        // console.log(num)
+        let rem,rev=0;
+        let c=num;
+        while(num > 0){
+            rem=num % 10;
+            rev=rev+(rem**3);
+            num = parseInt(num/10);
+        }
+        // console.log(rev)
+        if(c==rev){
+            document.getElementById('res').innerText = "armstrom"
+        }
+        else{
+           document.getElementById('res').innerText = "Not armstrom"
+        }
+     }
+</script>
+</html>

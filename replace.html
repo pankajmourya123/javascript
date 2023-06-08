@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "mr red has Red car"
+        console.log(str)
+        let reg = new RegExp('red','gi')//gi ka matlab global find karo aur i ka matlab ignore sentivity
+        // let newstr = str.replace("red","blue")
+        let newstr = str.replace(reg,'blue')
+        console.log(newstr)
+    </script>
+</body>
+</html>

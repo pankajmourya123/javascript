@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body{
+            text-align: center;
+            
+        }
+        div{
+            position: relative;
+            top: 200px;
+        }
+        input{
+            font-size: 30px;
+        }
+        button{
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+     <input type="text" id="data" placeholder="Enter number"><br>
+     <input type="text" id="data2" placeholder="Enter number"><br>
+     <input type="text" id="choice" placeholder="Enter choice '+','-','*','/'"><br>
+     <button id="btn" onclick="check()">&#128516;</button>
+     <h1 id="res"></h1>
+    </div>
+</body>
+<script>
+    function check(){
+    let num =parseInt(document.getElementById('data').value)
+    let num2 =parseInt(document.getElementById('data2').value)
+    let choice =document.getElementById('choice').value
+    
+    switch(choice)
+    {
+        case "+":
+            let sum = parseFloat( num + num2)
+            console.log(sum)
+            document.getElementById('res').innerText = `${num} and ${num2} sum is ${sum}`
+            break;
+        case "-":
+        let sub = parseFloat(num-num2)
+        console.log(sub)
+            document.getElementById('res').innerText = `${num} and ${num2} subtraction is ${sub}`  
+            break;
+        case "*":
+        let mul = parseFloat(num*num2)
+        console.log(mul)
+            document.getElementById('res').innerText = `${num} and ${num2} multiplication is ${mul}`     
+            break;
+        case "/":
+        let div = parseFloat(num/num2)
+        console.log(div)
+            document.getElementById('res').innerText = `${num} and ${num2} division is ${div}`
+            break;
+        default:
+            console.log("invalid opretor")
+            document.getElementById('res').innerText = "invalid opretor"
+
+
+
+
+
+    }
+
+}
+
+    
+
+</script>
+</html>

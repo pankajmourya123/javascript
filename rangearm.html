@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        <input type="text" id="data">lower limits
+        <input type="text" id="data2">upper limits
+        <button id="btn" onclick="arm()">genrate</button>
+        <h1 id="res"> </h1>
+    </body>
+    <script>
+          function arm(){
+            let num1 = document.getElementById("data").value
+            // console.log(num1)
+            let num2 = document.getElementById('data2').value
+            // console.log(num2)
+            for(let i = num1;i <= num2;i++){
+                 let temp = i;
+                 let noOfDidits = i.toString().length;
+                 let arm = 0;
+                 while(temp > 0){
+                  let rem = temp%10;
+                    arm = (rem**noOfDidits)+arm;
+                    temp = parseInt(temp/10);
+                    // console.log(temp)
+                 }
+                 if(arm == i){
+                  console.log(i)
+                 }
+            }
+          }
+    </script>
+    </html>
